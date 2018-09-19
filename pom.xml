@@ -22,12 +22,17 @@
   </modules>
 
   <distributionManagement>
-    <site>
-      <id>site-server</id>
-      <name>Test Project Site</name>
-      <url>file:///tmp/maven-project-site</url>
-    </site>
-  </distributionManagement>
+        <repository>
+            <id>mydeployment</id>
+            <name>Internal Releases</name>
+            <url>http://35.231.176.96:8081/repository/maven-releases/</url>
+        </repository>
+        <snapshotRepository>
+            <id>mydeployment</id>
+            <name>Internal Snapshot Releases</name>
+            <url>http://35.231.176.96:8081/repository/maven-snapshots/</url>
+        </snapshotRepository>
+    </distributionManagement>
 
   <build>
     <plugins>
